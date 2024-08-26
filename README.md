@@ -1,7 +1,9 @@
 # StyleMerge Diffusion: A training-free approach to prompted and artistically accurate image generation
 
 ### [Paper] 
-![imgs]
+![img1](./assets/abstract_userstudy2.jpg)
+![img2](./assets/af_userstudy.jpg)
+![img2](./assets/wave_userstudy2.jpg)
 
 
 ## Usage

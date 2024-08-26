@@ -1,0 +1,45 @@
+sty_fns = [
+     "./data_vis/sty/adolf-fleischmann_hommage.jpg",
+     "./data_vis/sty/flowersanime.png",
+     "./data_vis/sty/wave.png",
+     "./data_vis/sty/sketch.png",
+     "./data_vis/sty/the_starry_night.png",
+     "./data_vis/sty/abstract.png",
+     "./data_vis/sty/pixelart.png",
+]
+
+prompts = [
+    ["a cat and a rabbit", [2,5]],
+    ["a rabbit and a turtle", [2,5]],
+    ["a dog on a table", [2,5]],
+    ["a bike", [2]],
+    ["a white sheep and a red car on the street", [3,7]],
+    ["a vintage car parked in a town street", [3,8]], #IT DOES NOT CONVERGE
+    ["a field of sunflowers at sunrise", [4,6]],
+    ["an astronaut floating in space near a satellite", [2,8]],
+   #### #["a book near a smartphone", [2, 5]],
+    ["a dog and a tiger", [2,5]], #IT DOES NOT CONVERGE ALWAYS
+    ["a lion and a zebra on the savannah", [2,5]],
+    ["a butterfly and a bee on a flower", [2,5]],
+    ["a bear riding a bike", [2,5]], 
+    ["a bird and a fish", [2,5]],
+    ["a horse and a carriage", [2,5]],
+    ["a plane flying over a city", [3,6]],#
+    ["a red apple", [2]],
+    ["a mountain range at sunset", [3,5]],
+####   ["a panda and a bamboo tree", [2,5]],
+    ["a rocket launching into the sky", [3,6]],
+    ["a tiger in a jungle", [2,5]],
+    ["a couple dancing", [2,3]],
+    ["a surfer riding a wave", [3,5]],
+    ["a boat on a calm lake", [2,6]],
+####    ["a giraffe and an elephant", [2,5]],
+    ["a hot air balloon in the sky", [3,7]],
+    ["a car racing on a track", [3,6]],
+    ["a chef cooking in a kitchen", [2,6]],
+    ["a musician playing a guitar", [2,5]],
+    ["a spaceship and an alien", [2,5]],
+    ["a dragon and a knight", [2,5]],
+    ["a snowy mountain peak", [3]],
+    ["a farmer and a tractor", [2,5]],
+]

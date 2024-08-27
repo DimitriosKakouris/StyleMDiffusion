@@ -17,7 +17,7 @@
 
 It requires 16GB memory GPU for float16 image generation.
 
-#### ** You can also refer to "diffusers_implementation/" for StyleID implementation based on diffusers library. **
+#### Our implementation utilizes diffusers library [huggingface/diffusers](https://github.com/huggingface/diffusers)
 
 ## Setup
 
@@ -40,6 +40,7 @@ python3 run_styleid_diffusers.py --style_prompt None --gamma 0.9 --start 0 --tim
 
 To fine-tune the parameters, you have control over the following aspects in the style transfer:
 
+- **Timestep of style injection** is controlled by the `--timestep_thr` parameter.
 - **Attention-based style injection** is removed by the `--without_attn_injection` parameter.
 - **Query preservation** is controlled by the `--gamma` parameter.
   (A higher value enhances content fidelity but may result a lack of style fidelity).
@@ -48,33 +49,21 @@ To fine-tune the parameters, you have control over the following aspects in the 
 
 ## Evaluation
 
-For a quantitative evaluation, we incorporate a set of randomly selected inputs from [MS-COCO](https://cocodataset.org) and [WikiArt](https://github.com/cs-chan/ArtGAN/tree/master/WikiArt%20Dataset) in "./data" directory.
+For a quantitative evaluation, we incorporated the CMMD evaluation metric that offers a more complete metric than FID [sayakpaul/cmmd-pytorch](https://github.com/sayakpaul/cmmd-pytorch) and also FID.
 
-
-Before executing evalution code, please duplicate the content and style images to match the number of stylized images first. (40 styles, 20 contents -> 800 style images, 800 content images)
-
-run:
-```
-python util/copy_inputs.py --cnt data/cnt --sty data/sty
-```
-
-We largely employ [matthias-wright/art-fid](https://github.com/matthias-wright/art-fid) for the FID evaluation and [mahmoudnafifi/HistoGAN](https://github.com/mahmoudnafifi/HistoGAN) for HistoGAN.
-
-### Art-fid
+### CMMD
 run:
 ```
 cd evaluation;
-python eval_artfid.py --sty ../data/sty_eval --cnt ../data/cnt_eval --tar ../output
+python3 ./cmmd-pytorch/main.py ./cmmd-pytorch/reference_images/pixelart/ ../results/flowersanime --batch_size=32 --max_count=30000
 ```
 
-### Histogram loss
+### FID
 run:
 ```
 cd evaluation;
-python eval_histogan.py --sty ../data/sty_eval --tar ../output
+./evaluation/eval.sh
 ```
-
-Also, we additionally provide the style and content images for qualitative comparsion, in "./data_vis" directory.
 
 ## Citation
 If you find our work useful, please consider citing and star:

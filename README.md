@@ -34,6 +34,9 @@ pip install -r requirements.txt
 For running StyleMerge, run:
 
 ```
+cd diffusers_implementation/
+```
+```
 python3 run_styleid_diffusers.py --style_prompt None --gamma 0.9 --start 0 --timestep_thr 376 --ddim_steps 40 --save_dir ./output --sty_fn './data_vis/sty/flowersanime.png' --prompt "a rabbit and a turtle" --seed 42 --token_indices [2,5] --initno
 
 ```

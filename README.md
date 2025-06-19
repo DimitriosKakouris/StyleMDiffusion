@@ -1,10 +1,12 @@
 # StyleMerge Diffusion: A training-free approach to prompted and artistically accurate image generation
 
-### [Paper] 
+### Samples generated with StyleMergeDiffusion
 <div style="display: flex; justify-content: space-around;">
-  <img src="./assets/abstract_userstudy2.jpg" alt="img1" width="200"/>
-  <img src="./assets/af_userstudy.jpg" alt="img2" width="200"/>
-  <img src="./assets/wave_userstudy2.jpg" alt="img3" width="200"/>
+  <img src="./assets/abstract_userstudy2.jpg" alt="img1" width="300"/>
+  <img src="./assets/af_userstudy.jpg" alt="img2" width="300"/>
+  <img src="./assets/wave_userstudy2.jpg" alt="img3" width="300"/>
+  <img src="./assets/pixelart_userstudy.jpg" alt="img4" width="300"/>
+  
 </div>
 
 ## Usage

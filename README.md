@@ -3,7 +3,7 @@
 
 ### Pipeline of our Method:
 
-  <img src="./assets/stymerge_pipeline.png" align="center" width="700"/>
+  <img src="./assets/stymerge_pipeline_solid.png" align="center" width="700"/>
 
 ### Samples generated with StyleMergeDiffusion
 <div style="display: flex; justify-content: space-around;">

@@ -1,5 +1,7 @@
 # StyleMerge Diffusion: A training-free approach to prompted and artistically accurate image generation
 
+### About
+Our method utilizes Stable Diffusion 2.1 with the diffusers implementation to generate artistically accurate images via a reference art image. It does so without fine-tuning/extra training via Attention key injection and Semantic Alignment via Intial Latent Noise Optimization.
 
 ### Pipeline of our Method:
 

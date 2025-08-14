@@ -1,5 +1,10 @@
 # StyleMerge Diffusion: A training-free approach to prompted and artistically accurate image generation
 
+
+### Pipeline of our Method:
+
+  <img src="./assets/stymerge_pipeline.png" width="700"/>
+
 ### Samples generated with StyleMergeDiffusion
 <div style="display: flex; justify-content: space-around;">
   <img src="./assets/abstract_userstudy2.jpg" alt="img1" width="300"/>

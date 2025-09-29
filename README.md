@@ -1,7 +1,7 @@
 # StyleMerge Diffusion: A training-free approach to prompted and artistically accurate image generation
 
 ### About
-Our method utilizes Stable Diffusion 2.1 with the diffusers implementation to generate artistically accurate images via a reference art image. It does so without fine-tuning/extra training via Attention key injection and Semantic Alignment via Intial Latent Noise Optimization.
+StyleMerge Diffusion achieves artistically accurate image generation by transferring visual style from reference images to text-prompted content.Built on Stable Diffusion 2.1 and utilizing the diffusers library [huggingface/diffusers](https://github.com/huggingface/diffusers), It does so without fine-tuning/extra training via Attention key injection and Semantic Alignment via Initial Latent Noise Optimization.
 
 ### Pipeline of our Method:
 
@@ -24,9 +24,9 @@ Our method utilizes Stable Diffusion 2.1 with the diffusers implementation to ge
 2. [Run StyleMerge](#run-stylemerge)
 3. [Evaluation](#evaluation)
 
-It requires 16GB memory GPU for float16 image generation.
-
-#### Our implementation utilizes diffusers library [huggingface/diffusers](https://github.com/huggingface/diffusers)
+### System Requirements
+- GPU with 16GB VRAM (FP16 precision)
+- Our implementation utilizes diffusers library [huggingface/diffusers](https://github.com/huggingface/diffusers)
 
 ## Setup
 
@@ -46,9 +46,21 @@ For running StyleMerge, run:
 cd diffusers_implementation/
 ```
 ```
-python3 run_styleid_diffusers.py --style_prompt None --gamma 0.9 --start 0 --timestep_thr 376 --ddim_steps 40 --save_dir ./output --sty_fn './data_vis/sty/flowersanime.png' --prompt "a rabbit and a turtle" --seed 42 --token_indices [2,5] --initno
-
-```
+cd diffusers_implementation/
+python3 run_styleid_diffusers.py \
+  --style_prompt None \
+  --gamma 0.9 \
+  --start 0 \
+  --timestep_thr 376 \
+  --ddim_steps 40 \
+  --save_dir ./output \
+  --sty_fn './data_vis/sty/flowersanime.png' \
+  --prompt "a rabbit and a turtle" \
+  --seed 42 \
+  --token_indices [2,5] \
+  --initno
+  
+  ```
 
 To fine-tune the parameters, you have control over the following aspects in the style transfer:
 
@@ -57,7 +69,7 @@ To fine-tune the parameters, you have control over the following aspects in the 
 - **Query preservation** is controlled by the `--gamma` parameter.
   (A higher value enhances content fidelity but may result a lack of style fidelity).
 - **Attention temperature scaling** is controlled through the `--T` parameter.
-- **Initial latent AdaIN** is removed by the `--without_init_adain` parameter.
+- **Removal of initial latent AdaIN normalization** is controlled by the `--without_init_adain` parameter.
 
 ## Evaluation
 
@@ -66,8 +78,12 @@ For a quantitative evaluation, we incorporated the CMMD evaluation metric that o
 ### CMMD
 run:
 ```
-cd evaluation;
-python3 ./cmmd-pytorch/main.py ./cmmd-pytorch/reference_images/pixelart/ ../results/flowersanime --batch_size=32 --max_count=30000
+cd evaluation
+python3 ./cmmd-pytorch/main.py \
+  ./cmmd-pytorch/reference_images/pixelart/ \
+  ../results/flowersanime \
+  --batch_size=32 \
+  --max_count=30000
 ```
 
 ### FID

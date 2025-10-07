@@ -5,7 +5,13 @@ StyleMerge Diffusion achieves artistically accurate image generation by transfer
 
 ### Pipeline of our Method:
 
-  <img src="./assets/stymerge_pipeline.png" class="center" width="700"/>
+
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/stymerge_pipeline.png" width="700">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/stymerge_pipeline_light.png" width="700">
+    <img alt="Description" src="./assets/stymerge_pipeline_light.png" width="700"/>
+  </picture>
+  <!--<img src="./assets/stymerge_pipeline.png" class="center" width="700"/>-->
 
 ### Samples generated with StyleMergeDiffusion
 <div style="display: flex; justify-content: space-around;">

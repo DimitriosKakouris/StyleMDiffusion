@@ -1,5 +1,9 @@
 # StyleMerge Diffusion: A training-free approach to prompted and artistically accurate image generation
 
+[![Python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-ee4c2c?logo=pytorch&logoColor=white)](#)
+[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FFD21E?logo=huggingface&logoColor=000)](#)
+
 ### About
 StyleMerge Diffusion achieves artistically accurate image generation by transferring visual style from reference images to text-prompted content.Built on Stable Diffusion 2.1 and utilizing the diffusers library [huggingface/diffusers](https://github.com/huggingface/diffusers), It does so without fine-tuning/extra training via Attention key injection and Semantic Alignment via Initial Latent Noise Optimization.
 

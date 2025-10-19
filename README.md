@@ -98,3 +98,7 @@ run:
 cd evaluation;
 ./evaluation/eval.sh
 ```
+
+### Acknowledgements
+
+The authors gratefully acknowledge the use of resources (GPU Cluster) provided by the National Infrastructures for Research and Technology (GRNET).
